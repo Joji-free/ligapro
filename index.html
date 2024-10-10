@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/base.css">
     <title>Liga Pro- Buscar con Google </title> <!--EN este apartado se le cambia el nombre que tenia por defecto a por Liga Pro si se lo ve reflejado en la pestaña-->
 </head>
 <body>
-    <style> 
-        img {
-            vertical-align: middle;
-            margin-right: 30px;
-        }
-    </style> <!--Creamos un estilo dando a la imagen su horientacion-->
+   
 <h1> Ecuabet 
     <img src="imagenes/images.png" width="200" height="80" title="Liga Pro" >
 
@@ -19,46 +16,42 @@
    
      </h1>  <!--Damos un titulo a nuestra pagina y un logo de lo hace refeencia a lo encontrado -->
 
-     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #fdfdfdb6;
-        }
-        h1, h2 {
-            color: #020203;
-        }
-       
-    </style> <!--Damos estilos ya sean a la tabla como color grosor y el tamaño de como queremos la tabla -->
-    
-     <title>Buscador de Equipos</title>
-     <h1>Buscador </h1>
-<input type="text" id="buscador" placeholder="Buscar equipos..."> <!--Aqui nos muestra la barra de busqueda -->
-<input type="submit" value="Enviar" > <!--Este apartado nos sirve como diseño que nos muestra como un boton para enviar la informacion -->
 
+     <title>Buscador de Equipos</title>
+     <!-- Buscador para encontrar al equipo de su preferencia -->
+    <h2>Buscador </h2>
+    <input type="text" id="buscador" placeholder="Buscar equipos..." onkeyup="filtrarEquipos()">
+    <ul id="listaEquipos">
+        <li><a href="#OrenceSc" title="OrenceSc" class="smoothcroll">Orense SC</a></li>
+        <li><a href="#Libertad FC" title="Libertad FC" class="smoothcroll">Libertad FC</a></li>
+        <li><a href="#D. Cuenca" title="D. Cuenca" class="smoothcroll">D. Cuenca</a></li>
+        <li><a href="#Independiente del Valle" title="Independiente del Valle" class="smoothcroll">Independiente del Valle</a></li>
+        <li><a href="#Aucas" title="Aucas" class="smoothcroll">Aucas</a></li>
+        <li><a href="#Liga de Quito" title="Liga de Quito" class="smoothcroll">Liga de Quito</a></li>
+        <li><a href="#Delfín" title="Delfín" class="smoothcroll"> Delfín</a></li>
+        <li><a href="#Técnico Universitario" title="Técnico Universitario" class="smoothcroll"> Técnico Universitario</a></li>
+        <li><a href="# Cumbayá FC" title="Cumbayá FC" class="smoothcroll"> Cumbayá FC</a></li>
+        <li><a href="# Barcelona SC" title="Barcelona SC" class="smoothcroll"> Barcelona SC</a></li>
+        <li><a href="#El Nacional" title="El Nacional" class="smoothcroll">El Nacional</a></li>
+        <li><a href="# Mushuc Runa" title="Mushuc Runa" class="smoothcroll"> Mushuc Runa</a></li>
+        <li><a href="# Imbabura SC" title="Imbabura SC" class="smoothcroll"> Imbabura SC</a></li>
+        <li><a href="#U. Católica" title="U. Católica" class="smoothcroll"> U. Católica</a></li>
+    </ul>
+    <script>
+        function filtrarEquipos() {
+            const input = document.getElementById('buscador');
+            const filter = input.value.toLowerCase();
+            const ul = document.getElementById('listaEquipos');
+            const li = ul.getElementsByTagName('li');
+        
+            for (let i = 0; i < li.length; i++) {
+                const texto = li[i].textContent || li[i].innerText;
+                li[i].style.display = texto.toLowerCase().includes(filter) ? '' : 'none';
+            }
+        }
+        </script>
 <h2> Resumen del Partido  </h2>
-<style>
-     table {
-            width: 75%;
-            border-collapse: collapse;
-            margin: 10px 0;
-        }
-        th {
-            border: 2px solid #050404;
-            padding: 10px;
-            text-align: center;
-        }
-        td {
-            border: 2px solid #ab5959;
-            padding: 10px;
-            text-align: center;
-        }
-    
-        th {
-            background-color: #c45c3d;
-            color: white;
-        }
-</style>
+
 <table>
     </tr>
     <tr>
