@@ -7,13 +7,13 @@ body {
     background: #d5f4f0;
     font-family: "Oswald";
     font-size: 1.7rem;
-    /* esta etiquea toma el tamano padre(font-size de 16px) y lo va a multiplicar por 1.7*/
+    /* esta etiqueta toma el tamaño padre(font-size de 16px) y lo va a multiplicar por 1.7*/
     font-style: normal;
     /**/
     font-weight: 300px;
     /*grosor de la letra */
     line-height: 1;
-    /*muestra el interlieneado*/
+    /*muestra el interlineado*/
     color: black;
     /*color */
     margin: 0;
@@ -52,17 +52,17 @@ th {
     color: white;
 }
 
-/*Creamos la tabla, definimos una tabla y deficimos la celda de la tabla añadiendo un borde, un tamaño y una fondo */
+/*Creamos la tabla, definimos una tabla y definimos la celda de la tabla añadiendo un borde, un tamaño y un fondo */
 
 a {
     color: #cf1767;
     transition: all 0.3s ease-in-out;
 }
 
-/* creamos un color y una trancicion al seleccionar un elemento*/
+/* creamos un color y una transición al seleccionar un elemento*/
 
 a:hover,
-/* cunado soloca el mouse coloca el color */
+/* cuando se coloca  el mouse coloca el color */
 a:focus,
 /* da como un brillo que no se nota tanto */
 a:active {
