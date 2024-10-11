@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/main.css"> <!--Nos permite ver los estilos CSS que tengamos en otra carpeta -->
     <link rel="stylesheet" href="estilos/base.css">
-    <title>Liga Pro- Buscar con Google </title> <!--EN este apartado se le cambia el nombre que tenia por defecto a por Liga Pro si se lo ve reflejado en la pestaña-->
+    <title>Liga Pro- Buscar con Google </title>
+    <!--EN este apartado se le cambia el nombre que tenia por defecto a por Liga Pro si se lo ve reflejado en la pestaña-->
 </head>
+
 <body>
-   
-<h1> Ecuabet 
-    <img src="imagenes/images.png" width="200" height="80" title="Liga Pro" >
 
-    <img src="imagenes/ecuador.jpg" width="100" height="100"  title="Ecuador " >
-   
-     </h1>  <!--Damos un titulo a nuestra pagina y un logo de lo hace refeencia a lo encontrado -->
+    <h1> Ecuabet
+        <img src="imagenes/images.png" width="200" height="80" title="Liga Pro">
+        <!--Cargamos la imagen guardada en el asrchivo creado de imagenes -->
+
+        <img src="imagenes/ecuador.jpg" width="100" height="100" title="Ecuador ">
+
+    </h1> <!--Damos un titulo a nuestra pagina y un logo de lo hace refeencia a lo encontrado -->
 
 
-     <title>Buscador de Equipos</title>
-     <!-- Buscador para encontrar al equipo de su preferencia -->
+    <title>Buscador de Equipos</title>
+    <!-- Buscador para encontrar al equipo de su preferencia -->
     <h2>Buscador </h2>
     <input type="text" id="buscador" placeholder="Buscar equipos..." onkeyup="filtrarEquipos()">
     <ul id="listaEquipos">
         <li><a href="#OrenceSc" title="OrenceSc" class="smoothcroll">Orense SC</a></li>
         <li><a href="#Libertad FC" title="Libertad FC" class="smoothcroll">Libertad FC</a></li>
         <li><a href="#D. Cuenca" title="D. Cuenca" class="smoothcroll">D. Cuenca</a></li>
-        <li><a href="#Independiente del Valle" title="Independiente del Valle" class="smoothcroll">Independiente del Valle</a></li>
+        <li><a href="#Independiente del Valle" title="Independiente del Valle" class="smoothcroll">Independiente del
+                Valle</a></li>
         <li><a href="#Aucas" title="Aucas" class="smoothcroll">Aucas</a></li>
         <li><a href="#Liga de Quito" title="Liga de Quito" class="smoothcroll">Liga de Quito</a></li>
         <li><a href="#Delfín" title="Delfín" class="smoothcroll"> Delfín</a></li>
-        <li><a href="#Técnico Universitario" title="Técnico Universitario" class="smoothcroll"> Técnico Universitario</a></li>
+        <li><a href="#Técnico Universitario" title="Técnico Universitario" class="smoothcroll"> Técnico
+                Universitario</a></li>
         <li><a href="# Cumbayá FC" title="Cumbayá FC" class="smoothcroll"> Cumbayá FC</a></li>
         <li><a href="# Barcelona SC" title="Barcelona SC" class="smoothcroll"> Barcelona SC</a></li>
         <li><a href="#El Nacional" title="El Nacional" class="smoothcroll">El Nacional</a></li>
@@ -37,290 +43,321 @@
         <li><a href="# Imbabura SC" title="Imbabura SC" class="smoothcroll"> Imbabura SC</a></li>
         <li><a href="#U. Católica" title="U. Católica" class="smoothcroll"> U. Católica</a></li>
     </ul>
-    <script>
-        function filtrarEquipos() {
-            const input = document.getElementById('buscador');
-            const filter = input.value.toLowerCase();
-            const ul = document.getElementById('listaEquipos');
-            const li = ul.getElementsByTagName('li');
-        
-            for (let i = 0; i < li.length; i++) {
-                const texto = li[i].textContent || li[i].innerText;
-                li[i].style.display = texto.toLowerCase().includes(filter) ? '' : 'none';
-            }
-        }
-        </script>
-<h2> Resumen del Partido  </h2>
+    <!--Creamos una lista desordenada de cada uno de los equipos de la liga pro y de igual manera damos estilo CSS-->
+    <h2>
+        <ul>
+            <a href="#Resumen del Partido" title="" class="smoothcroll"> Resumen del Partido </a>
+        </ul>
+    </h2> <!--Creamos un enlace con una clase para ver el diseño que se le da a resumen -->
 
-<table>
-    </tr>
-    <tr>
-        <td> <img src="imagenes/Técnico_Universitario.png"width="30" height="30" >  Tecnico Universitario 2  vs  2 Mushuc Runa   <img src="imagenes/Mushuc Runa.png" width="30" height="30">  </td>
-        <td> Finalizado Hoy </td>
-        <td> Bellavista de Ambato </td>
-    </tr>
-</table>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c_frhakHe-A?si=SXFKEclBhNdFGQrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h2> Partidos -- Segunda Ronda  </h2>
-<table>
-    <tr>
-        <th>Partido</th>
-        <th>Fecha</th>
-        <th>Estadio</th>
-    </tr>
-    <tr>
-        <td><img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg"width="30" height="30" > Barcelona 0 vs 0 Libertd   <img src="imagenes/libertad.png"width="30" height="30" > </td>
-        <td> Dom, 29/9 </td>
-        <td> Estadio Monumental Banco de Pichincha </td>
-    </tr>
-    <tr>
-        <td><img src="imagenes/DEFIN.jpeg"width="30" height="30" > Delfin 3 vs 2 LDU Quito  <img src="imagenes/LDU Quito.jpeg"width="30" height="30"> </td>
-        <td> Dom, 29/9 </td>
-        <td> Estadio Jocay de Manta </td>
-    </tr>
-    <tr>
-        <td><img src="imagenes/Aucas.jpg"width="30" height="30" >  Aucas 1 vs 4 Dep. Cuenca  <img src="imagenes/Deportivo Cuenca.jpeg"width="30" height="30"> </td>
-        <td> Dom, 29/9</td>
-        <td> Estadio Gonzalo Pozo Ripalda </td>
-    </tr>
-    <tr>
-        <td><img src="imagenes/Cumbayá.jpeg"width="30" height="30" >  Cumbaya 1 vs 0 Emelec  <img src="imagenes/emelec.png"width="30" height="30" > </td>
+    <table> <!--creamos una tabla sobre el resumen de los partidos de esa semana -->
+        </tr>
+        <tr>
+            <td> <img src="imagenes/Técnico_Universitario.png" width="30" height="30"> Tecnico Universitario 2 vs 2
+                Mushuc Runa <img src="imagenes/Mushuc Runa.png" width="30" height="30"> </td>
+            <td> Finalizado Hoy </td>
+            <td> Bellavista de Ambato </td>
+        </tr>
+    </table> <!--Acaba la tabla -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/c_frhakHe-A?si=SXFKEclBhNdFGQrI"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!--Incorporamos un video-->
+
+    <h2>
+        <ul> <!--Creamos un alista desordenada y un titulo que va a tener un estilo -->
+            <a href="#Partidos -- Segunda Ronda " title="" class="smoothcroll">Partidos -- Segunda Ronda </a>
+        </ul>
+    </h2>
+    <table><!--Cramos una tabla -->
+        <tr><!--Definimos una tabla -->
+            <th>Partido</th><!--Definimos cada una de las celdas -->
+            <th>Fecha</th><!--Definimos cada una de las celdas -->
+            <th>Estadio</th><!--Definimos cada una de las celdas -->
+        </tr><!--Fin de la definicion de la tabla-->
+        <tr><!--Definimos una tabla -->
+            <td><img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg" width="30" height="30"> Barcelona 0 vs 0
+                Libertd <img src="imagenes/libertad.png" width="30" height="30"> </td>
+            <td> Dom, 29/9 </td>
+            <td> Estadio Monumental Banco de Pichincha </td>
+            <!--Definimos cada una de las celdas con imagen, fecha de encuentro y estadio  -->
+        </tr>
+        <tr><!--Definimos una tabla -->
+            <td><img src="imagenes/DEFIN.jpeg" width="30" height="30"> Delfin 3 vs 2 LDU Quito <img
+                    src="imagenes/LDU Quito.jpeg" width="30" height="30"> </td>
+            <td> Dom, 29/9 </td>
+            <td> Estadio Jocay de Manta </td>
+            <!--Definimos cada una de las celdas con imagen, fecha de encuentro y estadio  -->
+        </tr>
+        <tr><!--Definimos una tabla -->
+            <td><img src="imagenes/Aucas.jpg" width="30" height="30"> Aucas 1 vs 4 Dep. Cuenca <img
+                    src="imagenes/Deportivo Cuenca.jpeg" width="30" height="30"> </td>
+            <td> Dom, 29/9</td>
+            <td> Estadio Gonzalo Pozo Ripalda </td>
+            <!--Definimos cada una de las celdas con imagen, fecha de encuentro y estadio  -->
+        </tr>
+        <tr><!--Definimos una tabla -->
+            <td><img src="imagenes/Cumbayá.jpeg" width="30" height="30"> Cumbaya 1 vs 0 Emelec <img
+                    src="imagenes/emelec.png" width="30" height="30"> </td>
+            <td> Sab, 28/9</td>
+            <td> Estadio Olimpico Atahualpa</td>
+            <!--Definimos cada una de las celdas con imagen, fecha de encuentro y estadio  -->
+        </tr>
+        <tr><!--Definimos una tabla -->
+            <td><img src="imagenes/Independiente Valle.png" width="30" height="30"> Independiente del Valle 5 vs 2
+                U.Catolica <img src="imagenes/U.CATOLICA.png" width="30" height="30"" > </td>
         <td> Sab, 28/9</td>
-        <td> Estadio Olimpico Atahualpa</td>
-    </tr>
-    <tr>
-        <td><img src="imagenes/Independiente Valle.png"width="30" height="30" > Independiente del Valle 5 vs 2 U.Catolica   <img src="imagenes/U.CATOLICA.png"width="30" height="30"" > </td>
-        <td> Sab, 28/9</td>
-        <td> Complejo Independiente del Valle </td>
+        <td> Complejo Independiente del Valle </td> <!--Definimos cada una de las celdas con imagen, fecha de encuentro y estadio  -->
     </tr>
    
 </table> <!--Crea las tablas con su respectivo encabezado y cuerpo -->
 
-<h2> Partidos Proximos </h2> <!--Nos permite hacer los titulos -->
-<table>
+<h2><ul>
+    <a href=" #Partidos Proximos " title="" class=" smoothcroll">Partidos Proximos </a>
+                </ul>
+                </h2> <!--Nos permite hacer los titulos -->
+
+                <table><!--Creamos una tabla -->
 
 
-    <tr>
-        <th>Equipo </th>
-        <th>Fecha</th>
-        <th>Equipo</th>
-    </tr>
-    <tr> 
-        <td>  <img src="imagenes/libertad.png"width="30" height="30" > LIBERTAD  </td>
-        <td> 4OCT-19:00 </td>
-        <td> <img src="imagenes/Cumbayá.jpeg"width="30" height="30" > CUMBAYA </td> 
-    </tr>
-        <td> <img src="imagenes/Mushuc Runa.png"width="30" height="30" > MUSHUC RUNA</td>
-        <td>5OCT-11:00</td>
-        <td> <img src="imagenes/Independiente Valle.png"width="30" height="30" > INDEPENDIENTE DEL VALLE</td>
-    <tr>
-        <td> <img src="imagenes/Deportivo Cuenca.jpeg"width="30" height="30" > D.CUENCA</td>
-        <td>5OCT-13:00</td>
-        <td> <img src="imagenes/Técnico_Universitario.png"width="30" height="30" > T.UNIVERSITARIO </td>
-    </tr>
-    <tr>
-        <td> <img src="imagenes/El Nacional.png"width="30" height="30" > EL NACIONAL</td>
-        <td>5 OCT-16:00</td>
-        <td> <img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg"width="30" height="30" >BARCELONA</td>
-    </tr>
-    <tr>
-        <td> <img src="imagenes/U.CATOLICA.png"width="30" height="30" >U.CATOLICA</td>
-        <td>6 OCT-12:00</td>
-        <td> <img src="imagenes/imbabura.jpeg"width="30" height="30" >IMBABURA SC</td>
-    </tr>
-    <tr>
-        <td> <img src="imagenes/LDU Quito.jpeg"width="30" height="30" >LDU 
-            <td>6 OCT-14:30</td>
-            <td> <img src="imagenes/orense.png"width="30" height="30" >ORENSE</td>
-        </tr>
-        <tr>
-            <td> <img src="imagenes/emelec.png"width="30" height="30" >EMELEC </td>
-            <td>6 OCT-17:00</td>
-            <td> <img src="imagenes/Aucas.jpg"width="30" height="30" >SD AUCAS</td>
-        </tr>
-        <tr>
-            <td> <img src="imagenes/Macará.jpg"width="30" height="30" >MACARA</td>
-            <td>7 OCT-15:30</td>
-            <td> <img src="imagenes/DEFIN.jpeg"width="30" height="30" >DELFIN</td>
-        </tr>    
-    
+                    <tr><!--Definimos una tabla -->
+                        <th>Equipo </th><!--Definimos cada una de las celdas -->
+                        <th>Fecha</th><!--Definimos cada una de las celdas -->
+                        <th>Equipo</th><!--Definimos cada una de las celdas -->
+                    </tr>
+                    <tr> <!--Definimos una tabla -->
+                        <td> <img src=" imagenes/libertad.png" width="30" height="30"> LIBERTAD </td>
+                        <td> 4OCT-19:00 </td>
+                        <td> <img src="imagenes/Cumbayá.jpeg" width="30" height="30"> CUMBAYA </td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <td> <img src="imagenes/Mushuc Runa.png" width="30" height="30"> MUSHUC RUNA</td>
+                    <td>5OCT-11:00</td>
+                    <td> <img src="imagenes/Independiente Valle.png" width="30" height="30"> INDEPENDIENTE DEL VALLE
+                    </td><!--Definimos cada una de las celdas con equipos,fecha -->
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/Deportivo Cuenca.jpeg" width="30" height="30"> D.CUENCA</td>
+                        <td>5OCT-13:00</td>
+                        <td> <img src="imagenes/Técnico_Universitario.png" width="30" height="30"> T.UNIVERSITARIO </td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/El Nacional.png" width="30" height="30"> EL NACIONAL</td>
+                        <td>5 OCT-16:00</td>
+                        <td> <img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg" width="30" height="30">BARCELONA
+                        </td><!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/U.CATOLICA.png" width="30" height="30">U.CATOLICA</td>
+                        <td>6 OCT-12:00</td>
+                        <td> <img src="imagenes/imbabura.jpeg" width="30" height="30">IMBABURA SC</td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/LDU Quito.jpeg" width="30" height="30">LDU
+                        <td>6 OCT-14:30</td>
+                        <td> <img src="imagenes/orense.png" width="30" height="30">ORENSE</td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/emelec.png" width="30" height="30">EMELEC </td>
+                        <td>6 OCT-17:00</td>
+                        <td> <img src="imagenes/Aucas.jpg" width="30" height="30">SD AUCAS</td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td> <img src="imagenes/Macará.jpg" width="30" height="30">MACARA</td>
+                        <td>7 OCT-15:30</td>
+                        <td> <img src="imagenes/DEFIN.jpeg" width="30" height="30">DELFIN</td>
+                        <!--Definimos cada una de las celdas con equipos,fecha -->
 
-</table>
+                    </tr>
 
-<h2>Tabla de Posiciones - Fase 2</h2>
-<table>
-    <tr>
-        <th> Pos.</th>
-        <th>Equipo</th>
-        <th>PTS</th>
-        <th>PJ</th>
-        <th>G</th>
-        <th>E</th>
-        <th>P</th>
-        <th>DG</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td><img src="imagenes/Independiente Valle.png" width="30" height="30"> Ind. del Valle</td>
-        <td>16</td>
-        <td>8</td>
-        <td>5</td>
-        <td>1</td>
-        <td>2</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td> <img src="imagenes/LDU Quito.jpeg" width="30" height="30"> LDU Quito</td>
-        <td>16</td>
-        <td>8</td>
-        <td>5</td>
-        <td>1</td>
-        <td>2</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td> <img src="imagenes/orense.png" width="30" height="30"> Orense</td>
-        <td>16</td>
-        <td>8</td>
-        <td>5</td>
-        <td>1</td>
-        <td>2</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td> <img src="imagenes/Mushuc Runa.png" width="30" height="30"> Mushuc Runa</td>
-        <td>15</td>
-        <td>8</td>
-        <td>4</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td> <img src="imagenes/U.CATOLICA.png" width="30" height="30"> U. Católica</td>
-        <td>13</td>
-        <td>8</td>
-        <td>4</td>
-        <td>1</td>
-        <td>3</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td> <img src="imagenes/Macará.jpg" width="30" height="30"> Macará</td>
-        <td>13</td>
-        <td>8</td>
-        <td>4</td>
-        <td>1</td>
-        <td>3</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td> <img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg" width="30" height="30"> Barcelona</td>
-        <td>13</td>
-        <td>8</td>
-        <td>4</td>
-        <td>1</td>
-        <td>3</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td> <img src="imagenes/Técnico_Universitario.png" width="30" height="30"> Técnico Universitario</td>
-        <td>11</td>
-        <td>8</td>
-        <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td> <img src="imagenes/DEFIN.jpeg" width="30" height="30"> Delfín</td>
-        <td>11</td>
-        <td>8</td>
-        <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td>-1</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td> <img src="imagenes/El Nacional.png" width="30" height="30"> El Nacional</td>
-        <td>11</td>
-        <td>8</td>
-        <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td>-2</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td> <img src="imagenes/imbabura.jpeg" width="30" height="30"> Imbabura</td>
-        <td>10</td>
-        <td>8</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td> <img src="imagenes/libertad.png" width="30" height="30">Libertad</td>
-        <td>9</td>
-        <td>8</td>
-        <td>2</td>
-        <td>3</td>
-        <td>3</td>
-        <td>-4</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td> <img src="imagenes/Deportivo Cuenca.jpeg" width="30" height="30"> Dep. Cuenca</td>
-        <td>7</td>
-        <td>8</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td> <img src="imagenes/emelec.png" width="30" height="30"> Emelec</td>
-        <td>6</td>
-        <td>8</td>
-        <td>3</td>
-        <td>0</td>
-        <td>5</td>
-        <td>-3</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td> <img src="imagenes/Cumbayá.jpeg" width="30" height="30">Cumbayá</td>
-        <td>4</td>
-        <td>8</td>
-        <td>1</td>
-        <td>1</td>
-        <td>6</td>
-        <td>-8</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td> <img src="imagenes/Aucas.jpg" width="30" height="30"> Aucas</td>
-        <td>4</td>
-        <td>8</td>
-        <td>1</td>
-        <td>1</td>
-        <td>6</td>
-        <td>-10</td>
-    </tr>
-</table>
-    
+
+                </table> <!--Creamos una tabla de posiciones -->
+
+                <h2>
+                    <ul>
+                        <a href="#Tabla de Posiciones - Fase 2" title="" class="smoothcroll">Tabla de Posiciones - Fase
+                            2 </a>
+                    </ul>
+                </h2> <!--Nos permite hacer los titulos y ademas incluimos estilos -->
+                <table>
+                    <tr><!--Definimos una tabla -->
+                        <th> Pos.</th>
+                        <th>Equipo</th>
+                        <th>PTS</th>
+                        <th>PJ</th>
+                        <th>G</th>
+                        <th>E</th>
+                        <th>P</th>
+                        <th>DG</th> <!--Definimos celdas con PTS	PJ	G	E	P	DG-->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>1</td>
+                        <td><img src="imagenes/Independiente Valle.png" width="30" height="30"> Ind. del Valle</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>7</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>2</td>
+                        <td> <img src="imagenes/LDU Quito.jpeg" width="30" height="30"> LDU Quito</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>7</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>3</td>
+                        <td> <img src="imagenes/orense.png" width="30" height="30"> Orense</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>4</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>4</td>
+                        <td> <img src="imagenes/Mushuc Runa.png" width="30" height="30"> Mushuc Runa</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>5</td>
+                        <td> <img src="imagenes/U.CATOLICA.png" width="30" height="30"> U. Católica</td>
+                        <td>13</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>6</td>
+                        <td> <img src="imagenes/Macará.jpg" width="30" height="30"> Macará</td>
+                        <td>13</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>1</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>7</td>
+                        <td> <img src="imagenes/bebac4e35c86791627e74ae1baca0323.jpg" width="30" height="30"> Barcelona
+                        </td>
+                        <td>13</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>0</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>8</td>
+                        <td> <img src="imagenes/Técnico_Universitario.png" width="30" height="30"> Técnico Universitario
+                        </td>
+                        <td>11</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>9</td>
+                        <td> <img src="imagenes/DEFIN.jpeg" width="30" height="30"> Delfín</td>
+                        <td>11</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>-1</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>10</td>
+                        <td> <img src="imagenes/El Nacional.png" width="30" height="30"> El Nacional</td>
+                        <td>11</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>-2</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>11</td>
+                        <td> <img src="imagenes/imbabura.jpeg" width="30" height="30"> Imbabura</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>0</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>12</td>
+                        <td> <img src="imagenes/libertad.png" width="30" height="30">Libertad</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>-4</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>13</td>
+                        <td> <img src="imagenes/Deportivo Cuenca.jpeg" width="30" height="30"> Dep. Cuenca</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>0</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>14</td>
+                        <td> <img src="imagenes/emelec.png" width="30" height="30"> Emelec</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>-3</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>15</td>
+                        <td> <img src="imagenes/Cumbayá.jpeg" width="30" height="30">Cumbayá</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>-8</td><!--Definimos celdas con valores -->
+                    </tr>
+                    <tr><!--Definimos una tabla -->
+                        <td>16</td>
+                        <td> <img src="imagenes/Aucas.jpg" width="30" height="30"> Aucas</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>-10</td><!--Definimos celdas con valores -->
+                    </tr>
+                </table>
+
 </body>
+
 </html>
